@@ -17,7 +17,7 @@ This repository consists of several Jupiter notebooks that serve several purpose
 
 - **RussianFWords_raw.csv** is the raw data from the experiment (see below). It contains aggregated assessments of funniness for 2250 words and assessments by group.
 - **RussianFWords_processed1.csv** is the same data but preprocessed with procedures described in the notebook "GenerateFeatures.ipynb". It has such features as n-grams, phonetics, and lexical tags, and frequency measures.
-- **GenerateFeatures.ipynb** is the Jupiter notebook that takes in the "RussianFWords_raw.csv" file and gives out the "RussianFWords_processed1.csv". The preprocessing procedures are carefully described in it. Take note that some of the preprocessing, such as the interaction with the corpora takes a lot of time, so the notebook can run for up to 2 hours altogether.
+- **RussianFWords_generateFeatures.ipynb** is the Jupiter notebook that takes in the "RussianFWords_raw.csv" file and gives out the "RussianFWords_processed1.csv". The preprocessing procedures are carefully described in it. Take note that some of the preprocessing, such as the interaction with the corpora takes a lot of time, so the notebook can run for up to 2 hours altogether.
 - **RussianFWords_analysis.ipynb** is the Jupiter notebook that includes the analysis and visualizations connected to the data.
 
 ### Previous research
