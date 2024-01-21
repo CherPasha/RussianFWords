@@ -61,10 +61,10 @@ Formal:
 - Length of the word
 - Presence of specific letters and combinations of letters (n-gramms)
 - Presence of specific sounds
-- Frequency (?)
+- Frequency (previously the 'frequency_crawler.py' retrieved information about frequency from the National Corpus of Russian, however, after the corpus's website was updated it is not working any more, and I didn't have time to fix it yet)
 
 Semantic
-- Semantic features (obsene, jargon etc.)
+- Lexical features (obsene, jargon, regional etc.)
 
 Sadly, we were not able to replicate the semantic analysis undertaken by Westbury & Hollis (2019) as the measures the are using were not developped for Russian. 
 
