@@ -1,16 +1,20 @@
 import scrapy
 import pandas as pd
 from scrapy.crawler import CrawlerProcess
-
 import time
+
+input_path = 'RussianFWords_processed1.csv'
+export_path = 'RussianFWords_processed1.csv'
+
 start_time = time.time()
 
-path = 'test.csv'
-data = pd.read_csv(path, index_col='Unnamed: 0')
+data = pd.read_csv(input_path, index_col='Unnamed: 0')
 
-#Использовать точные формы или леммы?
-word_list = data['word']
+# We use the lemmatized words
+word_list = data['lem']
 
+
+# Create the behavior for the spider
 class FirstSpider(scrapy.Spider):
     name = 'ruscorpora'
 
@@ -42,6 +46,7 @@ class FirstSpider(scrapy.Spider):
         else:
             frequency.append(0)
             
+
 frequency = []
 
 
@@ -51,8 +56,11 @@ crawler.start()
 
 print(f"freq of shape: {len(frequency)}\ndata of shape: {data.shape}")
 
-frequency = [float("{:.3f}".format(x)) for x in frequency]
-data['freq'] = frequency
-data.to_csv(path)
-
 print("--- %s seconds ---" % (time.time() - start_time))
+
+# format the frequency
+frequency = [float("{:.3f}".format(x)) for x in frequency]
+# encode the frequency into the df
+data['freq'] = frequency
+# save into the file
+data.to_csv(export_path)
