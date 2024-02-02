@@ -19,6 +19,8 @@ This repository consists of several Jupiter notebooks that serve several purpose
 - **RussianFWords_processed1.csv** is the same data but preprocessed with procedures described in the notebook "GenerateFeatures.ipynb". It has such features as n-grams, phonetics, and lexical tags, and frequency measures.
 - **RussianFWords_generateFeatures.ipynb** is the Jupiter notebook that takes in the "RussianFWords_raw.csv" file and gives out the "RussianFWords_processed1.csv". The preprocessing procedures are carefully described in it. Take note that some of the preprocessing, such as the interaction with the corpora takes a lot of time, so the notebook can run for up to 2 hours altogether.
 - **RussianFWords_analysis.ipynb** is the Jupiter notebook that includes the analysis and visualizations connected to the data.
+- 
+***--> IMPORTANT: The analysis notebook is not added yet, will be very soon (it's not translated into english yet)***
 
 ### Previous research
 
